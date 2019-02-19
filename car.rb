@@ -1,16 +1,27 @@
-class Car 
-
-  def miles
+class Car
+  def Car.miles
     return 12
   end
-  def color
+  def Car.color
     return "red"
   end
-  def honk_horn
+  def Car.honk_horn
     return "*Honk!*"
   end
+   
+
   end
-  p Car.miles
+
   p Car.color
   p Car.honk_horn
-Bike = Car.new
+  p Car.miles
+
+  # Bike = Car.new
+  # Bike.color = "Red"
+  # Bike.honk_horn = "*Honk!*"
+  # Bike.ride = "*Rides bike*"
+  # p Bike.color
+  # p Bike.honk_horn
+  # p Bike.ride
+  
+  

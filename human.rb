@@ -1,17 +1,34 @@
 class Human
   def name
-    return "Dustin"
-  end
-  def age
-    return 30
+    @name
   end
 
-    # def speak
-      # p "Hello, my name is #{name} and I am #{age}."
+  def name=(name)
+    @name = name
+  end
+
+  def age
+    @age
+  end
+
+  def age=(age)
+    @age = age
+  end
+
+    def speak
+      p "Hello, my name is #{@name} and I am #{@age}."
+      end
     end
 
 
-#Dustin = Human.new
-p Dustin.class
-p Dustin.age
-# Dustin.speak
+dustin = Human.new
+dustin.name= "Dustin"
+dustin.age= 30
+puts dustin.name
+puts dustin.age
+dustin.speak
+
+todd = Human.new
+todd.name= "Todd"
+todd.age= 25
+todd.speak
