@@ -9,7 +9,7 @@ class Human
 
   def age
     @age
-  end
+  end 
 
   def age=(age)
     @age = age
