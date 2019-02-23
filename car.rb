@@ -1,31 +1,25 @@
-class Car
-  # attr_reader :miles, :color
-  # attr_writer :miles, :color
+class Vehicle
 
-  attr_accessor :miles, :colors, :drive
+  attr_accessor :color, :honk_horn
 
+  def initialize(color, honk_horn)
+    @color = color
+  end
+  
+  end
 
-  def initialize(miles, colors, drive)
+class Car < Vehicle
+ 
+
+  attr_accessor :miles, :drive
+
+  def initialize(miles, color, honk_horn)
+    super(color, honk_horn)
     @miles = miles
-    @colors = colors
-    @drive = drive
+    # @drive = drive
   
 end
-  # def miles
-  #   @miles
-  # end
 
-  # def miles=(miles)
-  #   @miles = miles
-  # end
-
-  # def color
-  #   @color
-  # end
-
-  # def color=(miles)
-  #   @miles = miles
-  # end
 
   def honk_horn
     return "*Honk!*"
@@ -33,30 +27,16 @@ end
    
 
   end
-  my_car = Car.new(12, "Red", "*Drives #{@drive} miles*" )
-  p my_car.colors
-  p my_car.honk_horn
-  p my_car.miles
-  p my_car.drive
-  # class Bike
+  my_car = Car.new(12, "Red", "Drives 5 miles")
+ 
+  class Bike < Vehicle
+    attr_accessor :ride
 
-  #   def color
-  #     return "Red"
-  #   end
+    def initialize(ride)
+      @ride = ride
+  end
+end
 
-  #   def honk_horn
-  #     return "*Honks!*"
-  #   end
-
-  #   def ride
-  #     return "*Rides bike*"
-  #   end
-  # end
-
-  #     my_bike = Bike.new
-  #     p my_bike.color
-  #     p my_bike.honk_horn
-  #     p my_bike.ride
 
   
   
