@@ -1,12 +1,4 @@
-class Vehicle
-
-  attr_accessor :color, :honk_horn
-
-  def initialize(color, honk_horn)
-    @color = color
-  end
-  
-  end
+require_relative "vehicle"
 
 class Car < Vehicle
  
@@ -29,13 +21,7 @@ end
   end
   my_car = Car.new(12, "Red", "Drives 5 miles")
  
-  class Bike < Vehicle
-    attr_accessor :ride
-
-    def initialize(ride)
-      @ride = ride
-  end
-end
+ 
 
 
   
